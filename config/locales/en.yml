@@ -30,4 +30,26 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  contact:
+    title: "Contact us"
+    contact_us: "Complete this form to get in touch with us"
+
+    name: "Name:"
+    enter_name: Enter your name
+    email: "Email Address:"
+    enter_email: Enter your email address
+    telephone: "Telephone:"
+    enter_telephone: Enter your telephone number
+    message: "Message:"
+    enter_message: What do you want to say?
+    submit: Sumbit Form
+
+    submit_form:
+      no_info: One or more of the fields are missing or invalid. Please fill up and check all the fields.
+      email_sent: Message sent successfully.
+
+  appointment:
+    name: "Name:"
+    time: "Choose a time:"
+    submit: "Book Appointment"
+    submitted: "Appointment Booked"

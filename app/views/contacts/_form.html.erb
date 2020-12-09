@@ -1,0 +1,15 @@
+<%= simple_form_for @contact do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name, label: I18n.t('contact.name'), placeholder: "Your Name" %>
+    <%= f.input :email,label: I18n.t('contact.email'), placeholder: 'user@domain.com' %>
+    <%= f.input :telephone, label: I18n.t('contact.telephone'), placeholder: "Your Telephone Number"  %>
+    <%= f.input :message, label: I18n.t('contact.message'), placeholder: "Your Message" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, I18n.t('contact.submit') %>
+  </div>
+<% end %>
