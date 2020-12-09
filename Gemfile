@@ -12,6 +12,7 @@ gem 'email_validator'
 gem 'haml'
 gem 'simple_calendar'
 gem 'trix'
+gem 'devise'
 
 
 
