@@ -15,15 +15,6 @@
   <%= @appointment.end_time %>
 </p>
 
-<p>
-  <strong>Patient:</strong>
-  <%= @appointment.patient %>
-</p>
-
-<p>
-  <strong>Nurse:</strong>
-  <%= @appointment.nurse %>
-</p>
 
 <%= link_to 'Edit', edit_appointment_path(@appointment) %> |
 <%= link_to 'Back', appointments_path %>
