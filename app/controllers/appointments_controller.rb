@@ -1,10 +1,11 @@
 class AppointmentsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
-
+  # before_action :authenticate_current_user,
   # GET /appointments
   # GET /appointments.json
   def index
-    @appointments = Appointment.all
+    @appointment = Appointment.all
   end
 
   # GET /appointments/1
@@ -25,6 +26,8 @@ class AppointmentsController < ApplicationController
   # POST /appointments.json
   def create
     @appointment = Appointment.new(appointment_params)
+    @appointment.patient_id = current_user.id
+    @appointment.nurse_id = current_user.id
 
     respond_to do |format|
       if @appointment.save
@@ -69,6 +72,6 @@ class AppointmentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def appointment_params
-      params.require(:appointment).permit(:name, :start_time, :end_time, :patient_id, :nurse_id)
+      params.require(:appointment).permit(:name, :start_time, :end_time, :patient_id, :nurse_id, :user_id)
     end
 end
