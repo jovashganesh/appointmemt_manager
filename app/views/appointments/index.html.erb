@@ -1,13 +1,2 @@
-<h3>Choose a date to book an appointment</h3>
-<div id="meeting-calender">
-  <%= month_calendar do |date| %>
-    <%= date %>
 
-  <% end %>
-</div>
-
-<div class="new_appointment">
-  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
-  </button>
-  <%= link_to "New Appointment", new_appointment_path, class: 'btn btn-default my-2' %>
-</div>
+  <%= render 'appointments', appointments: @appointments %>

@@ -1,0 +1,5 @@
+<h1>All Meetings</h1>
+<% @appointment.each do |appointment| %>
+  <% link_to appointment.name, appointment %>
+  <%= time(appointment.start_time) %>
+<% end %>

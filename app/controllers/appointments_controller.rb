@@ -26,8 +26,7 @@ class AppointmentsController < ApplicationController
   # POST /appointments.json
   def create
     @appointment = Appointment.new(appointment_params)
-    @appointment.patient_id = current_user
-    @appointment.nurse_id = current_user
+    @appointment.user_id = current_user.id
 
     respond_to do |format|
       if @appointment.save
@@ -72,6 +71,6 @@ class AppointmentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def appointment_params
-      params.require(:appointment).permit(:name, :start_time)
+      params.require(:appointment).permit(:name, :start_time, :end_time, :user_id)
     end
 end

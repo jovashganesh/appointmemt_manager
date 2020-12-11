@@ -2,14 +2,12 @@
 
 one:
   name: MyString
-  start_time: 2020-12-09 17:40:32
-  end_time: 2020-12-09 17:40:32
-  patient: one
-  nurse: one
+  start_time: 2020-12-11 12:43:20
+  end_time: 2020-12-11 12:43:20
+  user: one
 
 two:
   name: MyString
-  start_time: 2020-12-09 17:40:32
-  end_time: 2020-12-09 17:40:32
-  patient: two
-  nurse: two
+  start_time: 2020-12-11 12:43:20
+  end_time: 2020-12-11 12:43:20
+  user: two

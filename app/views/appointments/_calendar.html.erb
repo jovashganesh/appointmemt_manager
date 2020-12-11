@@ -1,0 +1,10 @@
+<div id="meeting-calender">
+  <%= month_calendar(events: @appointment) do |date, appointment| %>
+    <%= date %>
+    <% appointment.each do |app| %>
+      <div>
+        <%= link_to app.name, app %>
+      </div>
+      <% end %>
+  <% end %>
+</div>

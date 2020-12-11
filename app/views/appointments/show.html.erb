@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <p>
   <strong>Name:</strong>
@@ -7,12 +7,12 @@
 
 <p>
   <strong>Start time:</strong>
-  <%= @appointment.start_time %>
+  <%= time(@appointment.start_time) %>
 </p>
 
 <p>
   <strong>End time:</strong>
-  <%= @appointment.end_time %>
+  <%= time(@appointment.end_time) %>
 </p>
 
 
