@@ -1,7 +1,0 @@
-<%= simple_form_for @contact_form do |f| %>
-  <%= f.input :name, label: I18n.t('contact.name'), placeholder: "Your Name" %>
-  <%= f.input :email,label: I18n.t('contact.email'), placeholder: 'user@domain.com' %>
-  <%= f.input :telephone, label: I18n.t('contact.telephone'), placeholder: "Your Telephone Number"  %>
-  <%= f.input :message, label: I18n.t('contact.message'), placeholder: "Your Message" %>
-  <%= f.button :submit, I18n.t('contact.submit'), class: 'btn btn-default my-2' %>
-<% end %>
