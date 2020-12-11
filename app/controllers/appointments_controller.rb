@@ -13,6 +13,10 @@ class AppointmentsController < ApplicationController
   def show
   end
 
+  def showall
+    @appointment = Appointment.all
+  end
+
   # GET /appointments/new
   def new
     @appointment = Appointment.new

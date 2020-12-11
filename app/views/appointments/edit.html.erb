@@ -1,6 +1,7 @@
 <h1>Editing Appointment</h1>
 
 <%= render 'form', appointment: @appointment %>
-
-<%= link_to 'Show', @appointment %> |
-<%= link_to 'Back', appointments_path %>
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+</button>
+<%= link_to 'Show', @appointment, class: 'btn btn-default my-2' %> |
+<%= link_to 'Back', appointments_path, class: 'btn btn-default my-2' %>

@@ -15,5 +15,8 @@
  *= require_tree .
  *= require_self
  */
+$theme-colors: ( "bootstrap": #563d7c, "simpleform": #00617f );
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "simple_form-bootstrap/simple_form-bootstrap";

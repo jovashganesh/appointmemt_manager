@@ -6,10 +6,3 @@
   <p>We will respond back to you shorty!</p>
   <%= link_to 'Return Home', root_path, class: 'btn btn-default my-2' %>
 </div>
-<div class="m">
-  <% ContactForm.all.each do |contact| %>
-    <%= contact.name %>
-    <%= contact.email %>
-    <%= contact.telephone %>
-  <% end %>
-</div>

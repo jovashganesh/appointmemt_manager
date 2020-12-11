@@ -1,20 +1,18 @@
-
-
-<p>
-  <strong>Name:</strong>
-  <%= @appointment.name %>
-</p>
+<h1>Appointment for <%= @appointment.name %></h1>
 
 <p>
-  <strong>Start time:</strong>
+  <strong>Start Time:</strong>
   <%= time(@appointment.start_time) %>
 </p>
 
 <p>
-  <strong>End time:</strong>
+  <strong>End Time:</strong>
   <%= time(@appointment.end_time) %>
 </p>
 
 
-<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
-<%= link_to 'Back', appointments_path %>
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+</button>
+<%= link_to 'Edit', edit_appointment_path(@appointment), class: 'btn btn-default my-2'%>
+<%= link_to 'Back', appointments_path, class: 'btn btn-default my-2' %>
+<%= link_to 'Delete Appointment', appointment_path(@appointment), method: :destroy, data: { confirm: "Are you sure you want to delete appointment?"}, class: 'btn btn-default my-2' %>
