@@ -15,4 +15,4 @@
 </button>
 <%= link_to 'Edit', edit_appointment_path(@appointment), class: 'btn btn-default my-2'%>
 <%= link_to 'Back', appointments_path, class: 'btn btn-default my-2' %>
-<%= link_to 'Delete Appointment', appointment_path(@appointment), method: :destroy, data: { confirm: "Are you sure you want to delete appointment?"}, class: 'btn btn-default my-2' %>
+<%= link_to 'Delete Appointment', @appointment, method: :delete, data: { confirm: "Are you sure you want to delete appointment?"}, class: 'btn btn-default my-2' %>
