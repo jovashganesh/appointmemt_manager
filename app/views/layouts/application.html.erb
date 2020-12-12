@@ -10,7 +10,11 @@
   </head>
 
   <body>
-    <%= render 'shared/alert' %>
+      <% if notice %>
+        <%= render 'layouts/alert' %>
+      <% end %>
+
+
     <%= render 'shared/navbar' %>
   <div class="container">
     <%= yield %>

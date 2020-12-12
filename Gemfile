@@ -13,7 +13,8 @@ gem 'haml'
 gem 'simple_calendar'
 gem 'trix'
 gem 'devise'
-
+gem 'momentjs-rails'
+gem 'bootstrap3-datetimepicker-rails'
 
 
 

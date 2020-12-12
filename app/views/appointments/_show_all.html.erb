@@ -1,0 +1,30 @@
+<div class="table-responsive col-md col-md-offset-1">
+  <h1>All Appointments</h1>
+  <table class="table table-hover">
+    <caption>List of all appointments that are currently booked</caption>
+    <thead class="table-light">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Start Time</th>
+        <th scope="col">End Time</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @appointment.each do |appointment| %>
+        <tr>
+          <div>
+            <h1><% link_to appointment.name, appointment %><h1>
+          </div>
+          <td><%= appointment.name %></td>
+          <td><%= time(appointment.start_time) %> &ndash;</td>
+          <td><%= time(appointment.end_time) %></td>
+          <td><%= link_to 'Show', appointment, class: 'btn btn-default my-2' %></td>
+          <td><%= link_to 'Edit', edit_appointment_path(appointment), class: 'btn btn-default my-2' %></td>
+          <td><%= link_to 'Delete Appointment', appointment, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default my-2' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to 'Return Back', appointments_path, class: 'btn btn-default my-2' %>
+</div>

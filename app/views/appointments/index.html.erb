@@ -1,2 +1,6 @@
+<h3>Choose a date to book an appointment</h3>
 
-  <%= render 'appointments', appointments: @appointments %>
+<%= render 'calendar' %>
+
+<%= link_to "New Appointment", new_appointment_path, class: 'btn btn-default my-2' %>
+<%= link_to "Show All Appointments", showall_path, class: 'btn btn-default my-2' %>

@@ -14,7 +14,9 @@
 //= require activestorage
 //= require trix
 //= require turbolinks
-//= require_tree .
 //= require jquery
+//= require moment
+//= require bootstrap-datetimepicker
 //= require rails.validations
 //= require bootstrap-sprockets
+//= require_tree .
