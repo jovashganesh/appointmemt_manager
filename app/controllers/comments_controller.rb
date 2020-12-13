@@ -13,10 +13,8 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.save
         format.html { redirect_to appointment_path(@appointment)}
-        format.js #render create.js.erb
       else
         format.html { redirect_to appointment_path(@appointment), notice: "Your comment has not been saved"}
-        format.js
       end
     end
   end

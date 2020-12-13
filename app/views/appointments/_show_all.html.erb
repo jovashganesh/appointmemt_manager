@@ -12,7 +12,7 @@
 
     <tbody>
       <% @appointment.each do |appointment| %>
-      <% if appointment.name == current_user.name %>
+      <% if (appointment.name == current_user.name) || current_user.admin? %>
         <tr>
           <div>
             <h1><% link_to appointment.name, appointment %><h1>
@@ -21,8 +21,10 @@
           <td><%= time(appointment.start_time) %> &ndash;</td>
           <td><%= time(appointment.end_time) %></td>
           <td><%= link_to 'Show', appointment, class: 'btn btn-default my-2' %></td>
+          <% if current_user.admin == false %>
           <td><%= link_to 'Edit', edit_appointment_path(appointment), class: 'btn btn-default my-2' %></td>
-          <td><%= link_to 'Delete Appointment', appointment, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default my-2' %></td>
+          <% end %>
+          <td><%= link_to 'Cancel Appointment', appointment, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default my-2' %></td>
         </tr>
       <% end %>
       <% end %>

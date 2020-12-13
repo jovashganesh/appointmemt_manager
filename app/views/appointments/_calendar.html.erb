@@ -1,10 +1,10 @@
-<div id="meeting-calender">
+<div>
   <%= month_calendar(events: @appointment) do |date, appointment| %>
     <%= date %>
     <% appointment.each do |app| %>
       <div>
-        <% if current_user.name == app.name %>
-        <%= link_to app.name, app %>
+        <% if (current_user.name == app.name) || current_user.admin? %>
+        <%= link_to app.name, app, :style=> 'color:#03a5fc;', :class => 'css_class' %>
         <% else %>
         <p>Booked</p>
         <% end %>
