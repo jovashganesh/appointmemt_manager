@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :contacts
-  resources :appointments
+  resources :appointments do
+    resources :comments
+  end
   get 'showall', to:'appointments#showall'
   # resources :nurses
   # resources :patients

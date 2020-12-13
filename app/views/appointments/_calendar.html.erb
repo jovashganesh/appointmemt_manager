@@ -3,7 +3,11 @@
     <%= date %>
     <% appointment.each do |app| %>
       <div>
+        <% if current_user.name == app.name %>
         <%= link_to app.name, app %>
+        <% else %>
+        <p>Booked</p>
+        <% end %>
       </div>
       <% end %>
   <% end %>

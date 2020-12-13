@@ -1,0 +1,4 @@
+<div class="jumbotron">
+  <div> <%= comment.reply %> </div>
+  <%= link_to "Delete Comment", appointment_path(comment.appointment, comment), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-default my-2" %>
+</div>

@@ -1,7 +1,7 @@
 <div class="table-responsive col-md col-md-offset-1">
   <h1>All Appointments</h1>
   <table class="table table-hover">
-    <caption>List of all appointments that are currently booked</caption>
+    <caption>List of all your booked appointments</caption>
     <thead class="table-light">
       <tr>
         <th scope="col">Name</th>
@@ -12,6 +12,7 @@
 
     <tbody>
       <% @appointment.each do |appointment| %>
+      <% if appointment.name == current_user.name %>
         <tr>
           <div>
             <h1><% link_to appointment.name, appointment %><h1>
@@ -23,6 +24,7 @@
           <td><%= link_to 'Edit', edit_appointment_path(appointment), class: 'btn btn-default my-2' %></td>
           <td><%= link_to 'Delete Appointment', appointment, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default my-2' %></td>
         </tr>
+      <% end %>
       <% end %>
     </tbody>
   </table>

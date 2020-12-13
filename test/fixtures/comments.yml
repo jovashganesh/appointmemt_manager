@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reply: MyText
+  appointment: one
+
+two:
+  reply: MyText
+  appointment: two
