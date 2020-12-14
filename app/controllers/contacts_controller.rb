@@ -1,23 +1,20 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show]
 
-  # GET /contacts
-  # GET /contacts.json
+  #empty method to display index page
   def index
   end
 
-  # GET /contacts/1
-  # GET /contacts/1.json
+  #empty method to display show page
   def show
   end
 
-  # GET /contacts/new
+  #set up instance varibale for new model
   def new
     @contact = Contact.new
   end
 
-  # POST /contacts
-  # POST /contacts.json
+  # create new instance of contact
   def create
     @contact = Contact.new(contact_params)
 
@@ -32,12 +29,12 @@ class ContactsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    # assign variable to specific contact id
     def set_contact
       @contact = Contact.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
+    # these fields must be returned and not empty for an instance of model to be created
     def contact_params
       params.require(:contact).permit(:name, :email, :telephone, :message)
     end

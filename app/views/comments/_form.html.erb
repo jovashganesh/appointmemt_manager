@@ -1,3 +1,4 @@
+<% # a form for the user to enter text into a textbox and save it to the comment model %>
 <%= simple_form_for([@appointment, @comment]) do |f| %>
 <%= f.error_notification %>
 <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>

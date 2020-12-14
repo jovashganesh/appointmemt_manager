@@ -1,3 +1,4 @@
+<% # if there are any appointments render showall page else render page saying no appointments booked %>
   <% unless @appointment.any? %>
     <%= render 'new' %>
   <% else %>

@@ -1,19 +1,18 @@
 class AppointmentsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
-  # before_action :authenticate_current_user,
-  # GET /appointments
-  # GET /appointments.json
+
+  #show all appointments on index page
   def index
     @appointment = Appointment.all
   end
 
-  # GET /appointments/1
-  # GET /appointments/1.json
+  #show comments (model) in the show page
   def show
     @comment = Comment.new
   end
 
+  #show all appointments on show page
   def showall
     if current_user.admin?
       @appointment = Appointment.all
@@ -22,17 +21,16 @@ class AppointmentsController < ApplicationController
     end
   end
 
-  # GET /appointments/new
+  # make new appointment instance
   def new
     @appointment = Appointment.new
   end
 
-  # GET /appointments/1/edit
+  # edit appointment
   def edit
   end
 
-  # POST /appointments
-  # POST /appointments.json
+  # make new appointment and assign user id to that specific appointment
   def create
     @appointment = Appointment.new(appointment_params)
     @appointment.user_id = current_user.id
@@ -46,8 +44,7 @@ class AppointmentsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /appointments/1
-  # PATCH/PUT /appointments/1.json
+  #edit the appointment and update it in database
   def update
     respond_to do |format|
       if @appointment.update(appointment_params)
@@ -58,8 +55,7 @@ class AppointmentsController < ApplicationController
     end
   end
 
-  # DELETE /appointments/1
-  # DELETE /appointments/1.json
+  #cancel the appointment (delete)
   def destroy
     @appointment.destroy
     respond_to do |format|
@@ -68,12 +64,12 @@ class AppointmentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    # find specific appointment and make an instance of it
     def set_appointment
       @appointment = Appointment.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
+    # when creating appointment these specific fields must not be empty
     def appointment_params
       params.require(:appointment).permit(:name, :start_time, :end_time, :user_id)
     end

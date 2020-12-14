@@ -10,6 +10,7 @@
       </tr>
     </thead>
 
+    <!-- loop through all appointments and if appointment.id matches with user_id display it -->
     <tbody>
       <% @appointment.each do |appointment| %>
       <% if (appointment.name == current_user.name) || current_user.admin? %>
