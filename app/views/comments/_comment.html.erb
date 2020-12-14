@@ -5,7 +5,7 @@
       commented: (
       <%= time_ago_in_words(comment.created_at) %>
       ago )
-      <%= link_to "Delete Comment", appointment_comment_path(comment.appointment, comment), method: :delete, data: { confirm: "Are you sure?"}, class: "btn-group btn-group-xs btn-default my-2 pull-right" %>
+      <%= link_to "Delete Comment", appointment_comment_path(comment.appointment, comment), method: :delete, data: { confirm: "Are you sure you want to delete this comment"}, class: "btn-group btn-group-xs btn-default my-2 pull-right" %>
     </h3>
   </div>
   <div class="panel-body">

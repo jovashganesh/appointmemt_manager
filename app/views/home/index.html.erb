@@ -1,4 +1,17 @@
 <div class="jumbotron text-center">
-  <h1>Welcome to some page</h1>
-  <h4>A site to book your appointments or something idk</h4>
+  <h1><%= I18n.t('home.welcome') %></h1>
+  <h4><%= I18n.t('home.greeting') %></h4>
+  <hr>
+  <%= link_to 'Schedule Appointment', appointments_path, class: 'btn btn-default my-2' %>
+</div>
+
+<div class="col-md-6 col-md-offset-3">
+  <div class="panel panel-default text-center">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= I18n.t('home.contact') %></h3>
+    </div>
+    <div class="panel-body">
+      <%= link_to "Contact Us", new_contact_path, class: 'btn btn-default my-2' %>
+    </div>
+  </div>
 </div>

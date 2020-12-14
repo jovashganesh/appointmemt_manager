@@ -1,4 +1,4 @@
-<h2>Manage Appointments Here</h2>
+<h2><%=I18n.t('appointment.manage')%></h2>
 <%= render 'calendar' %>
 <div style="text-align: center;">
   <% if current_user.admin == false %>

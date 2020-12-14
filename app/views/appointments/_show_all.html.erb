@@ -1,7 +1,7 @@
 <div class="table-responsive col-md col-md-offset-1">
-  <h1>All Appointments</h1>
+  <h1><%=I18n.t('appointment.all_appointment')%></h1>
   <table class="table table-hover">
-    <caption>List of all your booked appointments</caption>
+    <caption><%=I18n.t('appointment.list_app')%></caption>
     <thead class="table-light">
       <tr>
         <th scope="col">Name</th>
@@ -24,7 +24,7 @@
           <% if current_user.admin == false %>
           <td><%= link_to 'Edit', edit_appointment_path(appointment), class: 'btn btn-default my-2' %></td>
           <% end %>
-          <td><%= link_to 'Cancel Appointment', appointment, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default my-2' %></td>
+          <td><%= link_to 'Cancel Appointment', appointment, class: 'btn btn-default my-2', method: :delete, data: { confirm: 'Are you sure you want to cancel this appointment?' } %></td>
         </tr>
       <% end %>
       <% end %>

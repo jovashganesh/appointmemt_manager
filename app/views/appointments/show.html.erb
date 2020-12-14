@@ -1,11 +1,11 @@
 <div class="jumbotron">
   <h1>Appointment for <%= @appointment.name %></h1>
   <p>
-    <strong>Start Time:</strong>
+    <strong><%=I18n.t('appointment.start_time')%></strong>
     <%= time(@appointment.start_time) %>
   </p>
   <p>
-    <strong>End Time:</strong>
+    <strong><%=I18n.t('appointment.end_time')%></strong>
     <%= time(@appointment.end_time) %>
   </p>
   <% if current_user.admin == false %>
@@ -15,6 +15,9 @@
   <%= link_to 'Go Back', appointments_path, class: 'btn btn-default my-2' %>
 </div>
 
-<h3>Comments</h3>
+<h3><%=I18n.t('appointment.comments')%></h3>
 <%= render 'comments/form' %>
 <%= render @appointment.comments %>
+<br>
+<br>
+<br>

@@ -1,7 +1,7 @@
 <div class="return_home">
   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
   </button>
-  <h1>Message Sent Successfully</h1>
-  <p>We will respond back to you shorty!</p>
+  <h1><%= I18n.t('contact.submit_form.email_sent') %></h1>
+  <p><%= I18n.t('contact.submit_form.confirmation') %></p>
   <%= link_to 'Return Home', root_path, class: 'btn btn-default my-2' %>
 </div>

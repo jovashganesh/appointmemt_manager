@@ -30,6 +30,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  title:
+    head: "Appointment Manager"
+
   contact:
     title: "Contact us"
     contact_us: "Complete this form to get in touch with us"
@@ -44,12 +47,38 @@ en:
     enter_message: What do you want to say?
     submit: Sumbit Form
 
+    edit: "Editing Contact"
+    all: "Contacts"
+
     submit_form:
       no_info: One or more of the fields are missing or invalid. Please fill up and check all the fields.
       email_sent: Message sent successfully.
+      confirmation: "We will get back to you shortly!"
+
 
   appointment:
     name: "Name:"
     time: "Choose a time:"
+    appointment_for: "Appointment for"
+    start_time: "Start Time:"
+    end_time: "End Time:"
     submit: "Book Appointment"
     submitted: "Appointment Booked"
+    booked: "Booked"
+    book_new: "Book New Appointment"
+    error_message: "Appointment cant be booked"
+    no_appointment: "You currently have no booked appointments"
+    all_appointment: "All Appointments"
+    list_app: "List of all your booked appointments"
+    confirm: "Are you sure you want to cancel this appointment?"
+    edit: "Edit Appointment"
+    manage: "Manage Appointments Here"
+    comments: "Comments"
+
+  home:
+    welcome: "Welcome to Appointment Manager"
+    greeting: "A site where you can book and schedule all your appointments with ease"
+    contact: "Any questions or queries don't hesitate to contact us!"
+
+  footer:
+    foot: "Appointment Manager © 2020 Copyright"
